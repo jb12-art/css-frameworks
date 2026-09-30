@@ -29,6 +29,7 @@
   border: 1px black solid;
   overflow-wrap: break-word;
   margin-bottom: 40px;
+  border-radius: 8px;
 }
 
 /* .js-post-card {

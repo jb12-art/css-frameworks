@@ -1,13 +1,13 @@
 @import url('./register-login.css');
 @import url('./media-card.css');
 
-/* body {
+body {
   margin: 0 auto;
   min-height: 100vh;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  background-color: bisque;
-} */
+  background-color: aliceblue;
+}
 
 /* .page-wrapper {
   display: flex;
