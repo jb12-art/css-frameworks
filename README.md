@@ -9,7 +9,7 @@
 
 # Build with
 
-HTML, CSS, vanilla JavaSCript.
+HTML, CSS, tailwindcss, vanilla JavaSCript.
 
 #
 
