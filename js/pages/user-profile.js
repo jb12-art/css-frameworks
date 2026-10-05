@@ -94,39 +94,6 @@ async function displayUserProfile() {
     const postCard = createPostCard(post, { showViewUser: false });
     postsContainer.appendChild(postCard);
   });
-
-  // (old code)
-  // posts.forEach((post) => {
-  //   const div = document.createElement('div');
-  //   div.dataset.id = post.id;
-  //   div.className =
-  //     'js-post-card border border-black bg-orange-100 m-4 p-4 rounded space-y-2 cursor-pointer';
-
-  //   div.innerHTML = `
-  //   <h4>${post.title}</h4>
-  //   <p>${post.body || 'No content'}</p>
-  //   ${
-  //     post.media?.url
-  //       ? `<img src="${post.media.url}" alt="${
-  //           post.media.alt || 'Post image'
-  //         }" width="200" />`
-  //       : ''
-  //   }
-  //   <p><small>Created: ${new Date(
-  //     post.created
-  //   ).toLocaleDateString()}</small></p>
-
-  //   `;
-  //   postsContainer.appendChild(div);
-  // });
-
-  // View individual post in new tab
-  // postsContainer.querySelectorAll('.js-post-card').forEach((btn) => {
-  //   btn.addEventListener('click', (event) => {
-  //     const id = event.target.dataset.id;
-  //     window.open(`post.html?id=${id}`, '_blank');
-  //   });
-  // });
 }
 
 // Run setup

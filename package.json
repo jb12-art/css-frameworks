@@ -5,21 +5,22 @@
   "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jb12-art/JS2.git"
+    "url": "git+https://github.com/jb12-art/css-frameworks.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/jb12-art/JS2/issues"
+    "url": "https://github.com/jb12-art/css-frameworks/issues"
   },
-  "homepage": "https://github.com/jb12-art/JS2#readme",
+  "homepage": "https://github.com/jb12-art/css-frameworks#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"

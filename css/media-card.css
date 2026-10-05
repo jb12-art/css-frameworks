@@ -1,24 +1,3 @@
-/* .create-post-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px black solid;
-  padding-bottom: 30px;
-  margin-bottom: 50px;
-} */
-
-/* .new-post {
-  display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-  width: 100%;
-} */
-
-/* .latest-posts {
-  margin: auto;
-  max-width: 1200px;
-} */
-
 /* (Don't touch) connected to JS, user-posts.js */
 .media-box {
   max-width: 1200px;
@@ -31,13 +10,6 @@
   margin-bottom: 40px;
   border-radius: 8px;
 }
-
-/* .js-post-card {
-  border: 1px solid black;
-  cursor: pointer;
-  margin: 20px 20px;
-  background-color: bisque;
-} */
 
 /* feed page/ js.post-card edit/delete buttons */
 .edit-btn,

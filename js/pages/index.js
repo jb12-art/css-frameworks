@@ -65,11 +65,6 @@ async function displayPosts(searchTerm = '', fetch = false) {
     return;
   }
 
-  // allPosts.forEach((post) => {
-  //   const postCard = createPostCard(post);
-  //   container.appendChild(postCard);
-  // });
-
   // Show only a slice of posts
   const postsToShow = allPosts.slice(0, visibleCount);
 
@@ -79,60 +74,6 @@ async function displayPosts(searchTerm = '', fetch = false) {
   });
 
   loadMoreBtn.style.display = visibleCount < allPosts.length ? 'block' : 'none';
-
-  // (Old code)
-  // allPosts.forEach((post) => {
-  //   const div = document.createElement('div');
-  //   div.className =
-  //     'js-post-card border border-black bg-orange-100 m-4 p-4 rounded cursor-pointer space-y-2';
-  //   div.dataset.id = post.id;
-
-  //   const isMyPost = currentUser && post.author?.name === currentUser.name;
-
-  //   div.innerHTML = `
-  //   <h3>${post.title}</h3>
-  //   <p>${post.body || 'No content'}</p>
-
-  //   ${
-  //     post.media?.url
-  //       ? `<img src="${post.media.url}" alt="${
-  //           post.media.alt || 'Post image'
-  //         }" width="200"/>`
-  //       : ''
-  //   }
-  //   <p><small>By: ${post.author.name}</small></p>
-  //   <p><small>Created: ${new Date(
-  //     post.created
-  //   ).toLocaleDateString()}</small></p>
-
-  //   <button class="view-user-btn mt-2 px-2 py-1 text-sm border border-black rounded bg-indigo-200 hover:bg-indigo-300" data-username="${
-  //     post.author.name
-  //   }">
-  //     View all ${post.author.name}'s Posts
-  //   </button>
-
-  //   ${
-  //     isMyPost
-  //       ? `
-  //     <button class="edit-btn" data-id="${post.id}">Edit</button>
-  //     <button class="delete-btn" data-id="${post.id}">Delete</button>
-  //     `
-  //       : ''
-  //   }
-  //   `;
-
-  //   container.appendChild(div);
-
-  //   // view single post
-  //   // Make post clickable
-  //   div.addEventListener('click', (event) => {
-  //     // Avoid triggering if user clicks Edit/Delete
-  //     if (event.target.tagName === 'BUTTON') return;
-
-  //     // Go to the individual post page in new tab
-  //     window.open(`post.html?id=${post.id}`, '_blank');
-  //   });
-  // });
 
   // View all user's posts button
   document.querySelectorAll('.view-user-btn').forEach((btn) => {
@@ -187,23 +128,15 @@ async function displayPosts(searchTerm = '', fetch = false) {
        </form>
       `;
 
-      // Prevent feed post edit to navigation to single post edit
-      // card
-      //   .querySelector('form')
-      //   .addEventListener('click', (e) => e.stopPropagation());
-
       // Save button
       card.querySelector('form').addEventListener('submit', async (e) => {
         e.preventDefault();
-        // const newTitle = e.target.querySelector('#editTitle').value;
-        // const newBody = e.target.querySelector('#editBody').value;
-        // const newImage = e.target.querySelector('#editImage').value;
 
         await updatePost(
           id,
           e.target.edittitle.value,
           e.target.editBody.value,
-          e.target.editImage.value
+          e.target.editImage.value,
         );
         allPosts = [];
         displayPosts(searchInput.value); // reload posts
@@ -263,7 +196,6 @@ if (viewProfileBtn) {
   viewProfileBtn.addEventListener('click', () => {
     const currentUser = load('profile');
     if (!currentUser) {
-      // container.innerHTML = `<p>Please login or register first.</p>`;
       alert('Please login first.');
       return;
     }

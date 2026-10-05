@@ -17,12 +17,18 @@ HTML, CSS, tailwindcss, vanilla JavaSCript.
 
 ### Installing.
 
-1. Clone the repo: git clone https://github.com/jb12-art/JS2.git
+1. Clone the repo: git clone https://github.com/jb12-art/css-frameworks.git
 2. Install the dependencies: npm install
 
 ### Running.
 
-To run the app, run the following commands: npm run start
+To run the app, run the following commands:
+
+```
+cd css-frameworks
+
+npm run start
+```
 
 #
 
