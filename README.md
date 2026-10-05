@@ -1,19 +1,20 @@
 # JS2
 
-# Description
+## Description
 
 - Noroff API V2 - Using JWT and API Keys.
 - producing a new JavaScript front-end client for an existing social media platform.
 
-#
 
-# Build with
+## Build with
 
 HTML, CSS, tailwindcss, vanilla JavaSCript.
 
-#
 
-# Getting Started
+## Live site: 
+https://jb12-art.github.io/css-frameworks/
+
+## Getting Started
 
 ### Installing.
 
@@ -30,14 +31,12 @@ cd css-frameworks
 npm run start
 ```
 
-#
 
-# How to make a user
+## How to make a user
 
 User with @noroff.no email can register a profile.
 
-#
 
-# Author
+## Author
 
 jb12-art
